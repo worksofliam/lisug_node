@@ -4,6 +4,8 @@ const app = express()
 const db = require(`./db`);
 const config = require(`./config`);
 
+const port = process.env.PORT || 3000;
+
 app.get('/', function (req, res) {
   res.send('Hello LISUG')
 })
@@ -45,7 +47,7 @@ app.get(`/employee/:id`, async (req, res) => {
 
 async function startup() {
   db.connect(config.connectionString).then(() => {
-    app.listen(3000);
+    app.listen(port);
   })
 }
 
