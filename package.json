@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "express": "^4.17.2",
+    "odbc": "^2.4.1"
+  }
+}
